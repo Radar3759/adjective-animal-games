@@ -50,7 +50,7 @@
                         </tr>
                     </thead>
                     <tbody>
-                        @foreach($cartItem as $item)
+                        @foreach($cartItems as $item)
                         
                         <tr>
                             <td>
@@ -60,7 +60,7 @@
                                 </a>
                             </td>
                             <td>
-                                <a href="../product/details.html">{{$item->model->name}}</a>
+                                <a href={{route('shop.product.details', ['slug' =>$item->model->slug])}}>{{$item->model->name}}</a>
                                 <div class="mobile-cart-content row">
                                     <div class="col">
                                         <div class="qty-box">
@@ -103,7 +103,6 @@
                                 </a>
                             </td>
                         </tr>
-
                         @endforeach
                     </tbody>
                 </table>
@@ -119,7 +118,7 @@
                     </div>
                     <div class="col-sm-5 col-7">
                         <div class="left-side-button float-start">
-                            <a href="../shop.html" class="btn btn-solid-default btn fw-bold mb-0 ms-0">
+                            <a href="{{route('shop.index')}}" class="btn btn-solid-default btn fw-bold mb-0 ms-0">
                                 <i class="fas fa-arrow-left"></i> Continue Shopping</a>
                         </div>
                     </div>
