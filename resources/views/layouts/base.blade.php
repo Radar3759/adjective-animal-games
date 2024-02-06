@@ -160,7 +160,7 @@
                                             <a href="wishlist/list.html">
                                                 <i data-feather="heart"></i>
                                                 <span id="wishlist-count" class="label label-theme rounded-pill">
-                                                   0
+                                                
                                                 </span>
                                             </a>
                                         </div>
@@ -624,7 +624,7 @@
         });
     </script>
 
-    @stack('s')
+    @stack('scripts')
 </body>
 
 </html>
